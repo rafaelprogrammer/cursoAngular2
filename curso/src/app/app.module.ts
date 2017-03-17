@@ -10,15 +10,18 @@ import { GiphyComponent } from './giphy/giphy.component';
 import { GiphyModule } from './giphy/giphy.module';
 import { GiphyService } from './giphy/giphy.service';
 import { SharedModule } from './shared/giphy.shared';
+import { ContatoComponent } from './contato/contato.component';
+import { ContatoModule } from './contato/contato.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     GiphyModule,
     ClienteModule,
+    ContatoModule,
     SharedModule,
     AppRoutingModule
   ],
