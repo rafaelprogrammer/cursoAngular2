@@ -20,6 +20,8 @@
   <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
     <span>Email</span>
     <input id="email"  type="email" name="email" placeholder="seu email" ngModel required>
+    <span>Mensagem</span>
+    <input id="mensagem"  type="text" name="mensagem" placeholder="sua mensagem" ngModel required>
   </label>
   <button type="submit" [disabled]="f.invalid">Sign up</button>
 

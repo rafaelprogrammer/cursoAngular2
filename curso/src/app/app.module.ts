@@ -12,6 +12,7 @@ import { GiphyService } from './giphy/giphy.service';
 import { SharedModule } from './shared/giphy.shared';
 import { ContatoComponent } from './contato/contato.component';
 import { ContatoModule } from './contato/contato.module';
+import {ContatoComponentService} from "./contato/contato.component.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ContatoModule } from './contato/contato.module';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [GiphyService],
+  providers: [GiphyService, ContatoComponentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
