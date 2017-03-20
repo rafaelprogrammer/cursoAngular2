@@ -1,7 +1,33 @@
+<!--
+  ngForm -> '#f'
+    ngModel -> 'nome'
+    ngModelGroup -> 'contato'
+      ngModel -> 'email'
+      ngModel -> 'confirmacao'
+-->
+
 <form #f="ngForm" (ngSubmit)="enviarContato(f)" >
 	<label>
 		<span>Seu nome completo</span>
-		
-		<input id="nome" [ngModel]="" type="text" name="nome" placeholder="seu nome" ngModel>
-	</label>
+		<input id="nome"  type="text" name="nome" placeholder="seu nome" ngModel minlength="2"
+           #nome="ngModel" required>
+  </label>
+
+  <div *ngIf="nome.errors?.required && nome.touched" class="error">
+      O nome é obrigatório
+  </div>
+
+  <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
+    <span>Email</span>
+    <input id="email"  type="email" name="email" placeholder="seu email" ngModel required>
+  </label>
+  <button type="submit" [disabled]="f.invalid">Sign up</button>
+
+
 </form>
+<p>
+  {{nome.errors | json}}
+</p>
+<p>
+  {{f.controls.nome?.errors | json}}
+</p>
