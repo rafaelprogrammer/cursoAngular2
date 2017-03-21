@@ -13,10 +13,12 @@ import { SharedModule } from './shared/giphy.shared';
 import { ContatoComponent } from './contato/contato.component';
 import { ContatoModule } from './contato/contato.module';
 import {ContatoComponentService} from "./contato/contato.component.service";
+import {PageNotFoundModule} from "./pagenotfound/pagenotfound.modules";
+import {InicioModule} from "./inicio/inicio.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,9 @@ import {ContatoComponentService} from "./contato/contato.component.service";
     ClienteModule,
     ContatoModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InicioModule,
+    PageNotFoundModule
   ],
   providers: [GiphyService, ContatoComponentService],
   bootstrap: [AppComponent]

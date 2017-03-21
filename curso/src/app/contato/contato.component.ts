@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {ContatoComponentService} from "./contato.component.service";
 
@@ -7,12 +7,12 @@ import {ContatoComponentService} from "./contato.component.service";
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']
 })
-export class ContatoComponent implements OnInit {
+export class ContatoComponent implements OnInit  {
 
 
   constructor(private contatoComponentService: ContatoComponentService) { }
 
-  ngOnInit() {
+  ngOnInit(){
 
   }
 
