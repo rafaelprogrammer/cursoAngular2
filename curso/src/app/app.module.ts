@@ -10,11 +10,12 @@ import { GiphyComponent } from './giphy/giphy.component';
 import { GiphyModule } from './giphy/giphy.module';
 import { GiphyService } from './giphy/giphy.service';
 import { SharedModule } from './shared/giphy.shared';
-import { ContatoComponent } from './contato/contato.component';
 import { ContatoModule } from './contato/contato.module';
 import {ContatoComponentService} from "./contato/contato.component.service";
 import {PageNotFoundModule} from "./pagenotfound/pagenotfound.modules";
 import {InicioModule} from "./inicio/inicio.module";
+import {GiphySearchAutoModule} from "./giphy/giphy-search/giphy-search-auto/giphy-search-auto.module";
+import {GiphySearchModule} from "./giphy/giphy-search/giphy-search.module";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import {InicioModule} from "./inicio/inicio.module";
     SharedModule,
     AppRoutingModule,
     InicioModule,
+    GiphySearchModule,
+    GiphySearchAutoModule,
     PageNotFoundModule
   ],
   providers: [GiphyService, ContatoComponentService],
