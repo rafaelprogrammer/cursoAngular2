@@ -13,8 +13,8 @@ import { Response } from '@angular/http';
 })
 export class GiphySearchAutoComponent  extends GiphySearchComponent{
 
-  constructor(protected title: Title){
-    super(title);
+  constructor(protected title: Title, protected giphySearchService: GiphySearchService){
+    super(title,giphySearchService);
   }
 
   ngOnInit(){
