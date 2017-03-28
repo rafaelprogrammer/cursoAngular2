@@ -23,7 +23,6 @@ export class GiphySearchComponent implements OnInit {
   }
 
   public pesquisarGiphy() {
-    console.log('entrou');
     this.giphySearchService.pesquisarGiphy(this.limit,this.term).subscribe((response: Response) => this.gifs = response.json().data);
   }
 

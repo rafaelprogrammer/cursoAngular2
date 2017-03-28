@@ -13,12 +13,22 @@ import { Response } from '@angular/http';
 })
 export class GiphySearchAutoComponent  extends GiphySearchComponent{
 
+  limit: string = "3";
+  term: string;
+  gifs: any[] = [];
+
   constructor(protected title: Title, protected giphySearchService: GiphySearchService){
     super(title,giphySearchService);
   }
 
   ngOnInit(){
     this.title.setTitle("GiphySearchAuto...");
+    this.giphySearchService.pesquisarGiphy(this.limit,this.term).subscribe((response: Response) => this.gifs = response.json().data);
+  }
+
+  public pesquisarGiphyTerm(term:string) {
+    this.term =  term;
+    this.giphySearchService.pesquisarGiphy(this.limit,this.term).subscribe((response: Response) => this.gifs = response.json().data);
   }
 
 }
