@@ -29,8 +29,6 @@ import {GiphySearchModule} from "./giphy/giphy-search/giphy-search.module";
     SharedModule,
     AppRoutingModule,
     InicioModule,
-    GiphySearchModule,
-    GiphySearchAutoModule,
     PageNotFoundModule
   ],
   providers: [GiphyService, ContatoComponentService],
